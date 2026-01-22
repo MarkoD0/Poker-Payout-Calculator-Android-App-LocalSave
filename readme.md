@@ -4,7 +4,7 @@
 ---
 
 ## 📱 App Preview
-<video src="Link" controls title="Poker Payout Calculator Demo" style="max-width: 100%;"></video>
+<video src="https://github.com/user-attachments/assets/05b518be-728c-4a58-b301-937a6946c62e" controls title="Poker Payout Calculator Demo" style="max-width: 100%;"></video>
 
 ---
 
@@ -33,7 +33,9 @@ This app offers a comprehensive suite of features to ensure smooth gameplay and 
 
 
 ## 📥 Installation
-You can download the latest installable APK from the [Releases Section](link-to-your-releases). 
+You can download the latest installable APK from releases section or [this link](https://github.com/MarkoD0/Poker-Payout-Calculator-Android-App-LocalSave/releases/download/v1.0/app-debug.apk). 
+#### (Note: This is a Debug Build)
 1. Download the `.apk` file.
 2. Transfer it to your Android device.
 3. Open the file to install (ensure "Install from unknown sources" is enabled).
+4. ⚠️ Since this is a debug-signed version, Google Play Protect may show a warning. Select "Install anyway" to proceed.
