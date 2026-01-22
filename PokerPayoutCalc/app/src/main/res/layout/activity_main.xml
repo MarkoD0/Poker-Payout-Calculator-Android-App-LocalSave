@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f5"
+    tools:context=".MainActivity">
+
+    <!-- broj igraca -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Current Players: 0"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="#e0e2e5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- recyclerView za prikazivanje liste -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPlayers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="3dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        tools:listitem="@layout/player_list_item" />
+
+    <!-- linearLayout za grupisanje dugmadi na dnu ekrana -->
+    <LinearLayout
+        android:id="@+id/bottomButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- dugme za zavrsetak igre (End Game) -->
+        <Button
+            android:id="@+id/buttonEndGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1.2"
+            android:backgroundTint="#F44336"
+            android:minHeight="90dp"
+            android:paddingHorizontal="1dp"
+            android:paddingVertical="8dp"
+            android:text="End Game"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+        <!-- dugme za dodavanje novog igraca -->
+        <Button
+            android:id="@+id/buttonAddPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:backgroundTint="#4CAF50"
+            android:minHeight="90dp"
+            android:padding="18dp"
+            android:text="Add New Player"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

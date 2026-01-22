@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f5"
+    android:padding="24dp"
+    tools:context=".PlayerInfoActivity">
+
+    <!-- ime -->
+    <TextView
+        android:id="@+id/textViewInfoPlayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Player Name"
+        android:textColor="#0A0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- buyinovi -->
+    <TextView
+        android:id="@+id/textViewInfoAllBuyins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="24dp"
+        android:text="All Buyins: 0"
+        android:textColor="#0A0A0A"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoPlayerName" />
+
+    <!-- cash titl -->
+    <TextView
+        android:id="@+id/textViewCashTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cash"
+        android:textColor="#0A0A0A"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoAllBuyins" />
+
+    <!-- cash svi -->
+    <TextView
+        android:id="@+id/textViewAllCashBuyinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="All buyins:"
+        android:textColor="#0A0A0A"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCashTitle" />
+
+    <TextView
+        android:id="@+id/textViewAllCashBuyinsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="0"
+        android:textColor="#0A0A0A"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewAllCashBuyinsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewAllCashBuyinsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewAllCashBuyinsLabel" />
+
+    <!-- lista cash -->
+    <TextView
+        android:id="@+id/textViewListCashBuyinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="List of buyins:"
+        android:textColor="#0A0A0A"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAllCashBuyinsValue" />
+
+    <TextView
+        android:id="@+id/textViewListCashBuyinsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="top|end"
+        android:minHeight="80dp"
+        android:text="-"
+        android:textColor="#0A0A0A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewListCashBuyinsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewListCashBuyinsLabel" />
+
+    <!-- loan titl -->
+    <TextView
+        android:id="@+id/textViewLoanTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Loan"
+        android:textColor="#0A0A0A"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewListCashBuyinsValue" />
+
+    <!-- svi loan -->
+    <TextView
+        android:id="@+id/textViewAllLoanBuyinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="All buyins:"
+        android:textColor="#0A0A0A"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoanTitle" />
+
+    <TextView
+        android:id="@+id/textViewAllLoanBuyinsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="0"
+        android:textColor="#0A0A0A"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewAllLoanBuyinsLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewAllLoanBuyinsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewAllLoanBuyinsLabel" />
+
+    <!-- lista loan -->
+    <TextView
+        android:id="@+id/textViewListLoanBuyinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="List of buyins:"
+        android:textColor="#0A0A0A"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAllLoanBuyinsValue" />
+
+    <TextView
+        android:id="@+id/textViewListLoanBuyinsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="top|end"
+        android:minHeight="80dp"
+        android:text="-"
+        android:textColor="#0A0A0A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewListLoanBuyinsLabel"
+        app:layout_constraintTop_toTopOf="@+id/textViewListLoanBuyinsLabel" />
+
+    <!-- Edit/Delete dugme -->
+    <Button
+        android:id="@+id/buttonEditDeleteBuyins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F44336"
+        android:padding="22dp"
+        android:text="Edit/Delete Buyins"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:cornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewListLoanBuyinsValue" />
+
+    <!-- nazad dugme -->
+    <Button
+        android:id="@+id/buttonInfoBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#607D8B"
+        android:padding="22dp"
+        android:text="Back"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditDeleteBuyins" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

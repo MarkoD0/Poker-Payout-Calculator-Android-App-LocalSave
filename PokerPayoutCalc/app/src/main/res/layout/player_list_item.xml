@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="5dp">
+
+    <!-- constraintLayout sa pozadinom koja se menja -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+        <!-- ime -->
+        <TextView
+            android:id="@+id/textViewPlayerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Player Name"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#0A0A0A"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPlayerAllBuyins" />
+
+        <!-- buyinovi -->
+        <TextView
+            android:id="@+id/textViewPlayerAllBuyins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All buyins: 0"
+            android:textSize="18sp"
+            android:textColor="#0A0A0A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPlayerName" />
+
+        <!-- dugmici -->
+        <LinearLayout
+            android:id="@+id/playerActionButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/buttonInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF9800"
+                android:minHeight="80dp"
+                android:text="Info"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/buttonCashout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"
+                android:minHeight="80dp"
+                android:text="Cashout"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/buttonRebuy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:minHeight="80dp"
+                android:text="Rebuy"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

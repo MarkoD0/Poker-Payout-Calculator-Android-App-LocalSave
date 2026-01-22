@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f5"
+    android:padding="24dp"
+    tools:context=".EditBuyinsActivity">
+
+    <!-- ime -->
+    <TextView
+        android:id="@+id/textViewEditBuyinsPlayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Player Name"
+        android:textColor="#0A0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- lejaut za naslove -->
+    <LinearLayout
+        android:id="@+id/titlesLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEditBuyinsPlayerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textViewLoanTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Loan"
+            android:textColor="#0A0A0A"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCashTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Cash"
+            android:textColor="#0A0A0A"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- lejaut za nizove -->
+    <LinearLayout
+        android:id="@+id/listsLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/titlesLayout"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEditBuyinsBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- loan recyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLoanBuyins"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="0dp"
+            android:layout_marginEnd="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/edit_buyin_list_item" />
+
+        <!-- cash recyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCashBuyins"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="0dp"
+            android:layout_marginStart="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/edit_buyin_list_item" />
+
+    </LinearLayout>
+
+    <!-- nazad dugme -->
+    <Button
+        android:id="@+id/buttonEditBuyinsBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="26sp"
+        android:padding="22dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#607D8B"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

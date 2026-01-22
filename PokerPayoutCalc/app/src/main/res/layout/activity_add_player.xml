@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f5"
+    android:padding="32dp"
+    tools:context=".AddPlayerActivity">
+
+    <!-- naslov -->
+    <TextView
+        android:id="@+id/textViewAddPlayerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="32dp"
+        android:text="Add New Player"
+        android:textColor="#0A0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- polje ime -->
+    <EditText
+        android:id="@+id/editTextPlayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Player Name"
+        android:inputType="textPersonName|textCapWords"
+        android:textColor="#0A0A0A"
+        android:textSize="28sp"
+        android:padding="20dp"
+        android:background="@drawable/rounded_edittext_background"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddPlayerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- checkBox VIP -->
+    <CheckBox
+        android:id="@+id/checkBoxVip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="VIP Player"
+        android:textColor="#0A0A0A"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPlayerName" />
+
+    <!-- polje Buy-in -->
+    <EditText
+        android:id="@+id/editTextInitialBuyinAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Initial Buy-in Amount"
+        android:inputType="number"
+        android:textSize="28sp"
+        android:padding="20dp"
+        android:background="@drawable/rounded_edittext_background"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- radioGroup Loan/Cash -->
+    <RadioGroup
+        android:id="@+id/radioGroupBuyinType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="#0A0A0A"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInitialBuyinAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonLoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan"
+            android:textColor="#0A0A0A"
+            android:textSize="26sp"
+            android:paddingEnd="32dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0A0A0A"
+            android:text="Cash"
+            android:textSize="26sp" />
+    </RadioGroup>
+
+    <!-- potvrdi dugme -->
+    <Button
+        android:id="@+id/buttonConfirmAddPlayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Player"
+        android:textSize="26sp"
+        android:padding="22dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupBuyinType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- nazad dugme -->
+    <Button
+        android:id="@+id/buttonAddPlayerBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="26sp"
+        android:padding="22dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#607D8B"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmAddPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
