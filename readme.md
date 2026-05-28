@@ -31,6 +31,13 @@ This app offers a comprehensive suite of features to ensure smooth gameplay and 
 
 #### This application is specifically crafted for home games and recreational play, making your poker nights more organized and enjoyable.
 
+---
+
+## 🌐 Looking for Cloud Sync?
+If you want to manage your games across multiple devices simultaneously, check out the **Firebase-powered version** of this app. It saves your data online in real-time, making it easy to share game states with your friends:
+👉 [Poker Payout Calculator (Firebase Sync Version)](https://github.com/MarkoD0/Poker-Payout-Calculator-Android-App-FirebaseSave)
+
+---
 
 ## 📥 Installation
 You can download the latest installable APK from releases section or [this link](https://github.com/MarkoD0/Poker-Payout-Calculator-Android-App-LocalSave/releases/download/v1.0/app-debug.apk). 
